@@ -12,5 +12,12 @@
     "title": "Lidio Jaimes",
     "section": "",
     "text": "I am a second-year ScM student in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health. My research interests focus on aging, particularly in the context of Alzheimer’s disease and cognitive decline."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Here is a toy analysis of the mtcars dataset. The following code chunk shows a summary of the dataset.\n\n\n  mean_mpg median_mpg   sd_mpg\n1 20.09062       19.2 6.026948"
   }
 ]

@@ -1,0 +1,24 @@
+---
+title: "Projects"
+---
+
+Here is a toy analysis of the mtcars dataset. The following code chunk shows a summary of the dataset.
+
+
+```{r, echo = FALSE}
+library(tidyverse) |> suppressPackageStartupMessages()
+mtcars %>%
+  summarise(
+    mean_mpg = mean(mpg),
+    median_mpg = median(mpg),
+    sd_mpg = sd(mpg)
+  )
+
+mtcars %>%
+  ggplot(aes(x = mpg)) +
+  geom_histogram(binwidth = 2, fill = "blue", color = "white") +
+  labs(title = "Distribution of Miles Per Gallon (mpg)",
+       x = "Miles Per Gallon (mpg)",
+       y = "Count") +
+  theme_bw()
+```
