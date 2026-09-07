@@ -1,0 +1,19 @@
+---
+title: "Lidio Jaimes"
+
+about:
+    template: jolla
+    image: lidiojaimes.png
+    links:
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/lidiojaimes/
+        - icon: github
+          text: GitHub
+          href: https://github.com/lidiojaimes
+        - icon: envelope
+          text: Email
+          href: mailto:ljaimes1@jhu.edu
+---
+
+I am a second-year ScM student in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health. My research interests focus on aging, particularly in the context of Alzheimer's disease and cognitive decline.
