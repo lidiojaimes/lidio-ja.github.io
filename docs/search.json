@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Instructions",
     "section": "",
-    "text": "I created this website to prep for office hours, mainly to practice setting it up in Positron.\nHelpful link: Publishing Quarto websites to GitHub Pages"
+    "text": "I created this website to prep for office hours, mainly to practice setting it up in Positron.\n\nOpen a Positron folder in the general folder where you’d like to set up your website. For example: Desktop, Documents, Downloads, etc.\nOpen the terminal (shortcut: Control + backtick (`)).\n\nType and enter: quarto create project website\nEnter your desired website name: first-last.github.io\nEnter the title: First Last\n\nPublish the folder to a public GitHub repository via Positron. Commit, pull, and push as you make changes to your website.\nYou now have a couple of new files. index.qmd is the homepage, about.qmd is the About page, and _quarto.yml is essentially the blueprint for the website. You can also edit index.qmd and about.qmd to your liking. You can also create new .qmd files for additional pages and add them to _quarto.yml.\nAdd any desired documents (resume, photos, posters, presentation slides, etc.) to this new folder. These documents can be placed in a subfolder named files.\nClick the Preview button to see what your website looks like.\nWhen you’re ready to publish your website, follow the steps in this helpful link to publish your website to GitHub Pages. Essentially, do the following:\n\nAdd output-dir: docs to the _quarto.yml file under type: website.\nNow work in the terminal:\n\nAdd a .nojekyll file to the root of your repository:\n\nMac/Linux: touch .nojekyll\nWindows: copy NUL .nojekyll\n\nRun the following in the terminal:\nquarto render\ngit add docs\ngit commit -m \"Publish site to docs/\"\ngit push\n\nFinally, configure your GitHub repository to publish from the docs directory of your main branch. On github.com, go to the Settings tab of your GitHub repository, then Pages. Select main as the branch and /docs as the folder. Click Save.\n\nRefresh and view your deployed website. It may take a few minutes for the website or new changes to appear.\nKEY: Every time you make a change to your website, you must hit the Preview button and then commit and push those changes so that the HTML is updated. The changes will not be reflected on your website until you do this. It may take a few minutes for the changes to appear. Just refresh."
   },
   {
     "objectID": "index.html",
@@ -18,6 +18,6 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Here is a toy analysis of the mtcars dataset. The following code chunk shows a summary of the dataset.\n\n\n  mean_mpg median_mpg   sd_mpg\n1 20.09062       19.2 6.026948"
+    "text": "Here is a toy analysis of the mtcars dataset.\n\n\n\nSummary of mtcars dataset\n\n\nmean_mpg\nmedian_mpg\nsd_mpg\n\n\n\n\n20.09062\n19.2\n6.026948"
   }
 ]

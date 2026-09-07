@@ -2,7 +2,7 @@
 title: "Projects"
 ---
 
-Here is a toy analysis of the mtcars dataset. The following code chunk shows a summary of the dataset.
+Here is a toy analysis of the mtcars dataset.
 
 
 ```{r, echo = FALSE}
@@ -12,7 +12,8 @@ mtcars %>%
     mean_mpg = mean(mpg),
     median_mpg = median(mpg),
     sd_mpg = sd(mpg)
-  )
+  ) |> 
+    knitr::kable(caption = "Summary of mtcars dataset")
 
 mtcars %>%
   ggplot(aes(x = mpg)) +

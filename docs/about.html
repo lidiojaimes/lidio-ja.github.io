@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Lidio Jaimes</title>
+<title>Instructions – Lidio Jaimes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -98,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Instructions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./projects.html"> 
@@ -123,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Instructions</h1>
 </div>
 
 
@@ -141,7 +176,39 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I created this website to prep for office hours, mainly to practice setting it up in Positron.</p>
-<p>Helpful link: <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing Quarto websites to GitHub Pages</a></p>
+<ol type="1">
+<li><p>Open a Positron folder in the general folder where you’d like to set up your website. For example: Desktop, Documents, Downloads, etc.</p></li>
+<li><p>Open the terminal (shortcut: Control + backtick (`)).</p>
+<ul>
+<li>Type and enter: <code>quarto create project website</code></li>
+<li>Enter your desired website name: <code>first-last.github.io</code></li>
+<li>Enter the title: <code>First Last</code></li>
+</ul></li>
+<li><p>Publish the folder to a public GitHub repository via Positron. Commit, pull, and push as you make changes to your website.</p></li>
+<li><p>You now have a couple of new files. <code>index.qmd</code> is the homepage, <code>about.qmd</code> is the About page, and <code>_quarto.yml</code> is essentially the blueprint for the website. You can also edit <code>index.qmd</code> and <code>about.qmd</code> to your liking. You can also create new <code>.qmd</code> files for additional pages and add them to <code>_quarto.yml</code>.</p></li>
+<li><p>Add any desired documents (resume, photos, posters, presentation slides, etc.) to this new folder. These documents can be placed in a subfolder named <code>files</code>.</p></li>
+<li><p>Click the <strong>Preview</strong> button to see what your website looks like.</p></li>
+<li><p>When you’re ready to publish your website, follow the steps in this helpful <a href="https://quarto.org/docs/publishing/github-pages.html">link</a> to publish your website to GitHub Pages. Essentially, do the following:</p>
+<ul>
+<li><p>Add <code>output-dir: docs</code> to the <code>_quarto.yml</code> file under <code>type: website</code>.</p></li>
+<li><p>Now work in the terminal:</p>
+<ul>
+<li><p>Add a <code>.nojekyll</code> file to the root of your repository:</p>
+<ul>
+<li>Mac/Linux: <code>touch .nojekyll</code></li>
+<li>Windows: <code>copy NUL .nojekyll</code></li>
+</ul></li>
+<li><p>Run the following in the terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add docs</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Publish site to docs/"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ul></li>
+<li><p>Finally, configure your GitHub repository to publish from the <code>docs</code> directory of your <code>main</code> branch. On github.com, go to the <strong>Settings</strong> tab of your GitHub repository, then <strong>Pages</strong>. Select <code>main</code> as the branch and <code>/docs</code> as the folder. Click <strong>Save</strong>.</p></li>
+</ul></li>
+<li><p>Refresh and view your deployed website. It may take a few minutes for the website or new changes to appear.</p></li>
+<li><p><strong>KEY:</strong> Every time you make a change to your website, you must hit the Preview button and then commit and push those changes so that the HTML is updated. The changes will not be reflected on your website until you do this. It may take a few minutes for the changes to appear. Just refresh.</p></li>
+</ol>
 
 
 
