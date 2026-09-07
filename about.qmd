@@ -3,3 +3,5 @@ title: "About"
 ---
 
 I created this website to prep for office hours; mainly to practice setting up in Positron. 
+
+Helpful link: https://quarto.org/docs/publishing/github-pages.html
